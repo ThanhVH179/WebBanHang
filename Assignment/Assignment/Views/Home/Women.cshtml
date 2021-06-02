@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Assignment.Models.Sanpham>
+@{
+    Layout = "_Layout";
+}
+<div class="cont span_2_of_3">
+    <div class="top-box">
+        @foreach (var item in Model)
+        {
+            <div class="col_1_of_3 span_1_of_3">
+                <a asp-action="Details" asp-route-id="@item.MaSp">
+                    <div class="inner_content clearfix">
+                        <div class="product_image">
+                            <img src="@item.Hinh" />
+                        </div>
+                        <div class="sale-box"><span class="on_sale title_shop">New</span></div>
+                        <div class="price">
+                            <div class="cart-left">
+                                <p class="title">@item.TenSp</p>
+                                <div class="price1">
+                                    <span class="actual">@item.Gia.ToString("n0").Replace(',', '.') VNĐ</span>
+                                </div>
+                            </div>
+                            <div class="cart-right"> </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>

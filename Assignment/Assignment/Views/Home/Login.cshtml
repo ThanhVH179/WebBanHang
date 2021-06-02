@@ -1,0 +1,25 @@
+﻿@model Assignment.Models.Quanly;
+@{
+    Layout = "_Layout";
+}
+<div class="register_account">
+    <div class="wrap">
+        <h2>Login</h2>
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label">Tài khoản</label> <br />
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pass" class="control-label">Mật khẩu</label><br />
+                <input asp-for="Pass" class="form-control" type="password" />
+                <span asp-validation-for="Pass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Đăng nhập" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

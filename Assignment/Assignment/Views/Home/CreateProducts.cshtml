@@ -1,0 +1,53 @@
+﻿@model Assignment.Models.Sanpham
+@{ 
+    Layout = "_Layout";
+}
+<div class="wrap">
+    <h2>Create Products</h2>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="CreateProducts" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="MaSp" class="control-label">Mã sản phẩm</label> <br />
+                    <input asp-for="MaSp" class="form-control" />
+                    <span asp-validation-for="MaSp" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TenSp" class="control-label">Tên sản phẩm</label> <br />
+                    <input asp-for="TenSp" class="form-control" />
+                    <span asp-validation-for="TenSp" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MaLoai" class="control-label">Mã loại</label> <br />
+                    <input asp-for="MaLoai" class="form-control" />
+                    <span asp-validation-for="MaLoai" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Gia" class="control-label">Giá</label> <br />
+                    <input asp-for="Gia" class="form-control" />
+                    <span asp-validation-for="Gia" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GiamGia" class="control-label">Giảm giá</label> <br />
+                    <input asp-for="GiamGia" class="form-control" />
+                    <span asp-validation-for="GiamGia" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="NgayNhap" class="control-label">Ngày nhập</label> <br />
+                    <input asp-for="NgayNhap" type="date" class="form-control" />
+                    <span asp-validation-for="NgayNhap" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ImageFile" class="control-label">Chọn hình</label> <br />
+                    <input asp-for="ImageFile" accept="image/" />
+                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

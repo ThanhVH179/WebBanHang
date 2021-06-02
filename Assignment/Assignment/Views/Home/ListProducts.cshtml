@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Assignment.Models.Sanpham>
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="wrap">
+    <a asp-action="CreateProducts" style="font-size:25px; font-weight:bold;">Create New</a>
+    <table id="listPro" class="table" align="center">
+        <thead>
+            <tr>
+                <th>
+                    Tên sản phẩm
+                </th>
+                <th>
+                    Giá
+                </th>
+                <th>
+                    Giảm giá
+                </th>
+                <th>
+                    Mã loại
+                </th>
+                <th>
+                    Ngày nhập
+                </th>
+                <th>
+                    Hình
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.TenSp
+                    </td>
+                    <td>
+                        @item.Gia.ToString("n0").Replace(',', '.')
+                    </td>
+                    <td>
+                        @item.GiamGia
+                    </td>
+                    <td>
+                        @item.MaLoai
+                    </td>
+                    <td>
+                        @item.NgayNhap
+                    </td>
+                    <td>
+                        <img src="@item.Hinh" style="width:50px;height:50px" />
+                    </td>
+                    <td>
+                        <a asp-action="EditProducts" asp-route-id="@item.MaSp">Edit</a> |
+                        <a asp-action="DeleteProducts" asp-route-id="@item.MaSp">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

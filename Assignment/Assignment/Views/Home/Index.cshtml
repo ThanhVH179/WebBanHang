@@ -1,0 +1,149 @@
+﻿@model IEnumerable<Assignment.Models.Sanpham>
+@{
+    Layout = "_Layout";
+}
+
+@{
+    List<Sanpham> sp = Model.ToList();
+}
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="section group">
+            <div class="cont span_2_of_3">
+                <h2 class="head">Featured Products</h2>
+                <div class="top-box">
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a asp-action="Details" asp-route-id="@sp[0].MaSp">
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img src="@sp[0].Hinh" />
+                                </div>
+                                <div class="sale-box"><span class="on_sale title_shop">New</span></div>
+                                <div class="price">
+                                    <div class="cart-left">
+                                        <p class="title">@sp[0].TenSp</p>
+                                        <div class="price1">
+                                            <span class="actual">@sp[0].Gia.ToString("n0").Replace(',', '.') VNĐ</span>
+                                        </div>
+                                    </div>
+                                    <div class="cart-right"> </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a asp-action="Details" asp-route-id="@sp[1].MaSp">
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img src="@sp[1].Hinh" />
+                                </div>
+                                <div class="sale-box"><span class="on_sale title_shop">New</span></div>
+                                <div class="price">
+                                    <div class="cart-left">
+                                        <p class="title">@sp[1].TenSp</p>
+                                        <div class="price1">
+                                            <span class="actual">@sp[1].Gia.ToString("n0").Replace(',', '.') VNĐ</span>
+                                        </div>
+                                    </div>
+                                    <div class="cart-right"> </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a asp-action="Details" asp-route-id="@sp[2].MaSp">
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img src="@sp[2].Hinh" />
+                                </div>
+                                <div class="sale-box"><span class="on_sale title_shop">New</span></div>
+                                <div class="price">
+                                    <div class="cart-left">
+                                        <p class="title">@sp[2].TenSp</p>
+                                        <div class="price1">
+                                            <span class="actual">@sp[2].Gia.ToString("n0").Replace(',', '.') VNĐ</span>
+                                        </div>
+                                    </div>
+                                    <div class="cart-right"> </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="top-box">
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a asp-action="Details" asp-route-id="@sp[3].MaSp">
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img src="@sp[3].Hinh" />
+                                </div>
+                                <div class="sale-box"><span class="on_sale title_shop">New</span></div>
+                                <div class="price">
+                                    <div class="cart-left">
+                                        <p class="title">@sp[3].TenSp</p>
+                                        <div class="price1">
+                                            <span class="actual">@sp[3].Gia.ToString("n0").Replace(',', '.') VNĐ</span>
+                                        </div>
+                                    </div>
+                                    <div class="cart-right"> </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a asp-action="Details" asp-route-id="@sp[4].MaSp">
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img src="@sp[4].Hinh" />
+                                </div>
+                                <div class="sale-box"><span class="on_sale title_shop">New</span></div>
+                                <div class="price">
+                                    <div class="cart-left">
+                                        <p class="title">@sp[4].TenSp</p>
+                                        <div class="price1">
+                                            <span class="actual">@sp[4].Gia.ToString("n0").Replace(',', '.') VNĐ</span>
+                                        </div>
+                                    </div>
+                                    <div class="cart-right"> </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a asp-action="Details" asp-route-id="@sp[5].MaSp">
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img src="@sp[5].Hinh" />
+                                </div>
+                                <div class="sale-box"><span class="on_sale title_shop">New</span></div>
+                                <div class="price">
+                                    <div class="cart-left">
+                                        <p class="title">@sp[5].TenSp</p>
+                                        <div class="price1">
+                                            <span class="actual">@sp[5].Gia.ToString("n0").Replace(',', '.') VNĐ</span>
+                                        </div>
+                                    </div>
+                                    <div class="cart-right"> </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
